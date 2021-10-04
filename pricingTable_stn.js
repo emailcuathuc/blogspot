@@ -182,7 +182,7 @@
             <i class="fa fa-briefcase"></i>
             <div class="price-value">1.468.000 ₫<span class="month">Một cấp</span> </div>
           </div>
-          <h3 class="heading">Business</h3>
+          <h3 class="heading">Gói 1 cấp</h3>
           <div class="pricing-content">
             <ul>
               <li>Chọn cấp bất kỳ</li>
