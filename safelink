@@ -1,0 +1,112 @@
+<p>Bạn có biết ngoài khóa học bạn đang xem, <b>Sự Nghiệp Học</b> còn đánh giá nhiều khóa học khác nữa không?</p>
+<div class='safelink-button' id='safelink'>
+  <div>
+    <div class='button outline' style='display:none;' id='safelink-wait'>Vui lòng chờ...</div>
+    <script>
+      /*<![CDATA[*/
+      var currentURL = location.href;
+      var str = currentURL;
+      var res = str.replace('https://danhgia.sunghiephoc.com/p/chuyen-huong.html' + '?url=', " ");
+
+      function changeLink() {
+        var decodedString = Base64.decode(res);
+        window.open(decodedString, '_blank')
+      };
+      document.write('<a href="#getLink" onclick="changeLink();" id="safelink-download" class="btn-re" rel="noreferrer noopener">Tuyệt vời, chuyển đến ngay</a>');
+      var linkDL = document.getElementById("safelink-download");
+      var notif = document.getElementById("safelink-wait");
+      var time = 3;
+      var textTime = document.createElement("span");
+      linkDL.parentNode.replaceChild(textTime, linkDL);
+      var id;
+      id = setInterval(function() {
+        time--;
+        if (time < 0) {
+          textTime.parentNode.replaceChild(linkDL, textTime);
+          clearInterval(id);
+          notif.style.display = "none";
+          linkDL.style.display = "inline-flex";
+        } else {
+          textTime.innerHTML = "Đang tìm liên kết " + time.toString() + " giây...";
+        }
+      }, 1000); /*]]>*/
+    </script>
+  </div>
+</div>
+<div class='safelink-content'>
+  <!--[ Write_your_content_here ]-->
+</div>
+<div class='safelink-create'>
+  <div class='ad-placement'>
+    <!--[ Your_ad_code_here ]-->
+  </div>
+  <div class='ad-placement'>
+    <!--[ Your_ad_code_here ]-->
+  </div>
+</div>
+<style>
+  /* Safelink */
+  :root {
+    --link-outline-color: #48525c;
+    --link-bg-color: #204ecf;
+  }
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    margin: 15px 15px;
+    padding: 10px 20px;
+    outline: 0;
+    border: 0;
+    border-radius: 2px;
+    color: #fefefe;
+    background-color: var(--link-bg-color);
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%;
+    line-height: 2em
+  }
+
+  .button.outline {
+    color: var(--link-outline-color);
+    background-color: transparent;
+    border: 0px
+  }
+
+  .button.outline:hover {
+    border-color: var(--link-bg-color)
+  }
+
+  .safelink-button,
+  .safelink-create>* {
+    margin: 1.8em 0
+  }
+
+  .safelink-button span {
+    display: block;
+    font-size: 18px
+  }
+
+  .btn-re {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+  }
+
+  #getLink {
+    margin: 5px 0
+  }
+
+  #getLink .button {
+    display: none
+  }
+
+  #getLink:target .button {
+    display: inline-flex
+  }
+</style>
