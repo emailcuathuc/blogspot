@@ -289,3 +289,29 @@ Chèn trước </body>
         auto_safelink();
     </script>
 </b:if>
+
+Code gốc
+
+<div class='ad-placement'>
+  <!--[ Your_ad_code_here ]-->
+</div>
+<div class='safelink-button' id='safelink'>
+  <div style='text-align: center'>
+    <div class='button outline' id='safelink-wait'>Please wait...</div>
+    <script>/*<![CDATA[*/ var currentURL = location.href; var str = currentURL; var res = str.replace('https://www.quane.com/p/chuyen-huong.html' + '?url=', " "); function changeLink(){ var decodedString = Base64.decode(res); window.open(decodedString, '_blank')}; document.write('<a href="#getLink" id="safelink-download" class="button">Create link</a>'); var linkDL = document.getElementById("safelink-download"); var notif = document.getElementById("safelink-wait"); var time = 5; var textTime = document.createElement("span"); linkDL.parentNode.replaceChild(textTime, linkDL); var id; id = setInterval(function () { time--; if (time < 0) { textTime.parentNode.replaceChild(linkDL, textTime); clearInterval(id); notif.style.display = "none"; linkDL.style.display = "inline-block"; } else { textTime.innerHTML = "Link will appear in " + time.toString() + " second"; }}, 1000); /*]]>*/</script>
+  </div>
+</div>
+<div class='safelink-content'>
+  <!--[ Write_your_content_here ]-->
+</div>
+<div class='safelink-create' style='text-align:center'>
+  <div class='ad-placement'>
+    <!--[ Your_ad_code_here ]-->
+  </div>
+  <div id='getLink'>
+    <a class='button' href='javascript:;' onclick='changeLink();' rel='noreferrer noopener' target='_blank'>Get link</a>
+  </div>
+  <div class='ad-placement'>
+    <!--[ Your_ad_code_here ]-->
+  </div>
+</div>
